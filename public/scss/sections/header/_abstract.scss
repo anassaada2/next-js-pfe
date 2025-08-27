@@ -1,0 +1,18 @@
+//****** Abstract ***********//
+@mixin megamenuTitle($color){
+  color: rgba($color, 0.5) !important;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.75;
+  transition: 0.4s;
+  margin-left: 10px;
+  padding-top: 12px;
+  text-transform: uppercase;
+
+  @media (min-width:992px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 15px;
+  }
+}

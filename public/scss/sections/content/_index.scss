@@ -1,0 +1,45 @@
+@use "../../abstract" as *;
+/* ========== Content Section Style ============= */
+
+.content{
+    &-text-block-02-wrapper{
+        @include row-gap(40px);
+        @media (min-width:992px){
+            @include row-gap(60px);
+        }
+    }
+    &-list-block{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 556px;
+        justify-content: space-between;
+        row-gap: 12px;
+    }
+    &-list{
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        li{
+            &::before{
+                content: "";
+                width: 6px;
+                min-width: 6px;
+                max-width: 6px;
+                height: 6px;
+                min-height: 6px;
+                max-height: 6px;
+                border-radius: 500px;
+                background-color: $black-2;
+                top: 12px;
+                position: relative;
+            }
+        }
+        &-item{
+            display: flex;
+            column-gap: 12px;
+            @include body-18(500);
+            
+        }
+    }
+}

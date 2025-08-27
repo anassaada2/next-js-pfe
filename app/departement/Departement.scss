@@ -1,0 +1,54 @@
+.titre-departement {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+@media (min-width: 768px) {
+  .section-departement {
+    gap: 50px;
+  }
+  .image-departement {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .section-departement {
+    gap: 50px;
+  }
+  .image-departement {
+    width: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .aaa {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-departement {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .aaa {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .hero-departement {
+    h3 {
+      font-size: 40px;
+    }
+    h6 {
+      font-size: 20px;
+    }
+  }
+}
+.span-ecoboot {
+  color: greenyellow;
+}
+//.container-departement {
+//  margin-top: 20px;
+//    margin-bottom: 100px;
+//   @media (min-width: 992px) {
+//   margin-top: 200px;
+//margin-bottom: 200px;
+//}
+//}

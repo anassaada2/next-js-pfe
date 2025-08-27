@@ -1,0 +1,82 @@
+@use "../../abstract" as *;
+/* ==========  Award Section Style ============= */
+.award {
+    &-section {
+        position: relative;
+        &__shape {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0.2;
+        }
+        .award-content-wrapper {
+        }
+    }
+}
+
+.award-widget {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-top: 1px solid rgba(5, 5, 5, 0.1);
+    border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+
+    .date {
+        width: 30%;
+        @media (min-width: 992px) {
+            width: 16%;
+        }
+        @include body-16;
+        order: 2;
+        display: flex;
+        justify-content: flex-end;
+        @media (min-width: 992px) {
+            order: 1;
+            display: block;
+        }
+    }
+    &__title {
+        width: 70%;
+        @include heading-24;
+        order: 1;
+
+        @media (min-width: 992px) {
+            width: 34%;
+            order: 2;
+        }
+    }
+
+    p {
+        width: 96%;
+        @include body-18;
+        order: 3;
+        @media (min-width: 992px) {
+            width: 40%;
+        }
+    }
+    &__link {
+        width: 4%;
+        display: flex;
+        display: flex;
+        justify-content: flex-end;
+        order: 4;
+        @media (min-width: 992px) {
+            width: 10%;
+        }
+        i {
+            color: $black-2;
+            transform: rotate(-45deg);
+            transition: 0.4s;
+        }
+    }
+    &:hover {
+        .award-widget__link {
+            i {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}

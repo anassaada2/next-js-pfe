@@ -1,0 +1,65 @@
+@use '../abstract' as *;
+/******* Utility Classes ********/
+.justify-center{
+  justify-content: center;
+}
+.h-full{
+height: 100%;
+}
+.fw-400{
+  font-weight: normal;
+}
+.fw-500{
+  font-weight: 500; 
+}
+.fw-600{
+  font-weight: 600;
+}
+
+
+/******* Utility Text Colors ********/
+
+
+/******* Utility Background Colors ********/
+.bg-white{
+  background: #FFFFFF;
+}
+.bg-cream{
+  // background-color: $cream-hex;
+}
+.bg-cream-dark{
+  background-color: #F5EFEB;
+}
+
+.bg-black{
+  background-color: $black-2;
+}
+.bg-black-2{
+  // background-color: $black-2-hex;
+
+}
+.bg-primary{
+  background: $primary;
+}
+.bg-sand{
+  background-color: $wild-sand;
+}
+.text-sand{
+  color: $wild-sand;
+}
+
+.text-primary{
+  color: $primary !important;
+}
+.text-white{
+  color: $white !important;
+}
+.text-black{
+  color: $black-2 !important;
+}
+.text-scorpion{
+  color: $scorpion !important;
+}
+.text-gray{
+  color: $dusty-gray-hex;
+}

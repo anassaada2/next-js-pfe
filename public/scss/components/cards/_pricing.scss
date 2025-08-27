@@ -1,0 +1,43 @@
+@use '../../abstract' as *;
+/* ========== Components: Pricing Card Style ============= */
+.pricing-card{
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  &__inner{
+    overflow: hidden;
+  }
+  &__title{
+    @include heading-26;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  p{
+    @include body-18;
+    margin-bottom: 28px;
+  }
+  ul{
+    margin-bottom: 40px;
+    @media (min-width:768px){
+      margin-bottom: 60px;
+    }
+    @media (min-width:992px){
+      margin-bottom: 80px;
+    }
+  }
+  &__bottom{
+    @include row-gap(32px);
+    transform: translateY(70px);
+    transition: .4s
+  }
+  &__price{
+    @include heading-60;
+  }
+  &:hover{
+    .pricing-card__bottom{
+      transform: translateY(0px);
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@use "/public/scss/style.scss";
+
+// pagination
+.ui-next,
+.ui-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  z-index: 9;
+  opacity: 0.3;
+  color: white;
+  transition: all 0.3s ease-in-out;
+
+  i {
+    font-size: 25px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.ui-prev {
+  left: 0;
+}
+
+.ui-next {
+  right: 0;
+}
+
+// custom dot 1 start
+.ui-custom-dot {
+  height: 12px;
+  width: 12px;
+  border: 1px solid var(--black-2);
+  border-radius: 100%;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin: 0 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    background-color: var(--black-2);
+    transform: scale(0);
+    border-radius: 100%;
+    transition: all 0.4s;
+  }
+
+  &.swiper-pagination-bullet-active {
+    background: transparent;
+    &::after {
+      transform: scale(1);
+    }
+  }
+}
+
+.ui-swipper-wrapper {
+  padding-bottom: 90px !important;
+}
+
+// custom dot 1 start
+
+// custom dot 2 start
+.ui-custom-dot-2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 5px;
+
+  &.swiper-pagination-bullet-active {
+    background-color: var(--bs-primary);
+  }
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}
+
+.ui-swipper-wrapper-2 {
+  padding-bottom: 60px !important;
+}
+
+// custom dot 3 end
+
+// select theme 1 start
+
+.select-theme1 {
+  .css-1u9des2-indicatorSeparator {
+    display: none;
+  }
+}
+// select theme 1 end
+
+// sidebar start
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: #fff;
+  transition: all 0.3s;
+
+  aside {
+    height: 100%;
+  }
+  &.active {
+    left: 0;
+  }
+}
+
+.sidebar-logo {
+  padding: 18px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+// sidebar end
+
+// map start
+.contact_location-main {
+  margin-bottom: -9px;
+}
+// map end
+
+// active mobile sidebar menu start
+.ui-nav-active2 {
+  > a {
+    font-weight: bold !important;
+  }
+}
+// active mobile sidebar menu end

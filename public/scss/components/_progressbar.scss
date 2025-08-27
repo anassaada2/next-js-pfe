@@ -1,0 +1,30 @@
+@use '../abstract' as *;
+.progressbar-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  .progressbar-single{
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      .progressbar-label{
+          @include body-18(500);
+          display: flex;
+          justify-content: space-between;
+      }
+      .progressbar{
+          height: 2px;
+          background-color: rgba(5, 5, 5, 0.10)!important;;
+          overflow: hidden;
+          position: relative;
+          .bar{
+              height: 100%;
+              width: 80%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: #000000;
+          }
+      }
+  }
+}

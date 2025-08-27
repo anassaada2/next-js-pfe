@@ -1,0 +1,10 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="calendar_today">
+<mask id="mask0_1_4602" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
+<rect id="Bounding box" width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_4602)">
+<path id="calendar_today_2" d="M2.75 20.1667V3.66671H5.5V1.83337H7.33333V3.66671H14.6667V1.83337H16.5V3.66671H19.25V20.1667H2.75ZM4.58333 18.3334H17.4167V9.16671H4.58333V18.3334ZM4.58333 7.33337H17.4167V5.50004H4.58333V7.33337Z" fill="#050505"/>
+</g>
+</g>
+</svg>

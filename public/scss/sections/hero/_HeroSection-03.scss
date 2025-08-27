@@ -1,0 +1,93 @@
+@use "../../abstract" as *;
+/* ========== Home 3 : Hero Section Style ============= */
+
+.hero{
+    &-section-03{
+        padding-top: 110px;
+        position: relative;
+        &_wrapper{
+            position: relative;
+        }
+       
+        .hero-content-03{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 40px;
+            max-width: 940px;
+            padding-bottom: 40px;
+            text-align: center;
+            @media (min-width:992px){
+                text-align: initial;
+                justify-content: initial;
+                align-items: initial;
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+            @media (min-width:1200px){
+                padding-top: 140px;
+                padding-bottom: 140px;
+            }
+            &__title{
+                margin-bottom: 16px;
+                text-transform: uppercase;
+            }
+            p{
+                @media (min-width:992px){
+                max-width: 852px;
+                }
+                @media (min-width:1200px){
+                    max-width: 852px;
+                }
+            }
+            &_button-group{
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 15px;
+                column-gap: 24px;
+                a{
+                    @media (max-width:767px){
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+            &_image-3{
+                width: 100%;
+                @media (min-width:992px){
+                position: absolute;
+                width: 43%;
+                z-index: -1;
+                height: 100%;
+                right: 0;
+                top: 0;
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-position: top;
+                }
+            }
+        }
+    }
+    &-contact-widgets{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        row-gap: 15px;
+        padding-bottom: 60px;
+        justify-content: center;
+        text-align: center;
+        @media (min-width:768px){
+            column-gap: 108px;
+        }
+        @media (min-width:992px){
+            text-align: initial;
+            justify-content: initial;
+            padding-bottom: 80px;
+        }
+    }
+}
+  
+
+   

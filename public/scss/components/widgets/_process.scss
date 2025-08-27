@@ -1,0 +1,58 @@
+@use '../../abstract' as *;
+/* ========== Component : Process Widget   ============= */
+.process-widget{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    @media (min-width:992px){
+    row-gap: 48px;
+    }
+  text-align: center;
+  p{
+    max-width: 360px;
+    color: $wild-sand;
+    margin-left: auto;
+    margin-right: auto;
+    @include body-18(500);
+  }
+  a{
+    color: $wild-sand;
+    &:hover{
+      color: $primary;
+    }
+    i{
+      color: $wild-sand;
+      &:hover{
+        color: $primary;
+      }
+    }
+  }
+}
+    
+
+
+.process-widget-devider{
+  &>*{
+    position: relative;
+    &:after{
+      content:"";
+      content: "";
+    width: 39%;
+    height: 1px;
+    min-width: 70px;
+    background-color: rgba(245, 245, 245, 0.12);
+    position: absolute;
+    top: 15%;
+    right: 0;
+    transform: translateX(50%);
+      display: none;
+    }
+    @media (min-width:992px){
+      &:not(:last-child){
+        &:after{
+          display: block;
+        }
+      }
+    }
+  }
+}

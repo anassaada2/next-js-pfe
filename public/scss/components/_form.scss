@@ -1,0 +1,178 @@
+@use "../abstract" as *;
+/* ========== Components: Form Style ============= */
+.newsletter-form-1 {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(245, 245, 245, 0.12);
+    position: relative;
+
+    .submit-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        i {
+            position: relative;
+            top: 0px;
+            right: 0px;
+            transition: 0.4s;
+        }
+    }
+    .form-control {
+        background-color: initial;
+        border-width: 0px;
+        border-radius: 0px;
+        width: 100%;
+        height: auto;
+        color: $wild-sand-rgb;
+        @include body-18(500);
+        padding-left: 0;
+        padding-bottom: 14px;
+        padding-top: 0;
+        &::placeholder {
+            color: rgba($wild-sand-rgb, 0.4000000059604645);
+        }
+        &:focus {
+            box-shadow: none;
+            border-bottom-color: $primary;
+            & ~ {
+                .submit-button {
+                    i {
+                        top: -2px;
+                        right: -3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-control {
+    border-color: rgba($black-2-rgb, 0.1);
+    border-radius: 0;
+    @include py(13px);
+    @include px(24px);
+    background-color: transparent;
+    &::placeholder {
+        color: $black-2;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        border-color: rgba($black-2-rgb, 1);
+        background-color: transparent;
+    }
+}
+
+input.form-control {
+    height: 56px;
+}
+textarea.form-control {
+    height: 170px;
+}
+
+.form-searchbox {
+    position: relative;
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70px;
+        height: 100%;
+        font-size: 22px;
+        @include flex;
+    }
+}
+
+.select-sort {
+    min-width: 163px;
+    .nice-select {
+        height: auto;
+        line-height: 30px;
+        padding: 0 30px 0 0;
+        border: 0;
+        position: relative;
+
+        .current {
+            border: none;
+            background: none;
+            font-size: 18px;
+            @include body-18(500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                margin-left: 1rem;
+                font-size: 14px;
+            }
+        }
+
+        .list {
+            width: 100%;
+            position: absolute;
+            z-index: 9;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+            box-sizing: border-box;
+            margin-top: 4px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transform-origin: 50% 0;
+            -ms-transform-origin: 50% 0;
+            -ms-transform: scale(0.75) translateY(-21px);
+            -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25),
+                opacity 0.15s ease-out;
+            transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25),
+                opacity 0.15s ease-out;
+
+            .option {
+                cursor: pointer;
+                font-weight: 400;
+                line-height: 40px;
+                list-style: none;
+                min-height: 40px;
+                outline: 0;
+                padding-left: 18px;
+                padding-right: 29px;
+                text-align: left;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: #f6f6f6;
+                }
+
+                &.selected {
+                    font-weight: bold;
+                    &.focus {
+                        background-color: #f6f6f6;
+                    }
+                }
+            }
+        }
+
+        &.open {
+            .list {
+                opacity: 1;
+                visibility: visible;
+                -webkit-transform: scale(1) translateY(0);
+                -ms-transform: scale(1) translateY(0);
+                transform: scale(1) translateY(0);
+            }
+        }
+    }
+}
+
+.checkout-form {
+    .form-control {
+        @include body-18;
+    }
+    textarea.form-control {
+        height: 200px;
+    }
+}

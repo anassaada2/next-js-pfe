@@ -1,0 +1,84 @@
+@use '../../abstract' as *;
+/* ========== Components: Team Card Style ============= */
+.team-card{
+  background: #FFF;
+  box-shadow: 0px 3px 12px 0px rgba(5, 5, 5, 0.04);
+  @include py(40px);
+  @include px(40px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  row-gap: 24px;
+  @media (min-width:768px){
+    row-gap: 64px;
+    padding-top: 60px;
+  }
+  &__image{
+    padding: 8px;
+    position: relative;
+    border: 1px solid $black-2;
+    @include square(140px,500px);
+    @media (min-width:768px){
+      @include size(196px);
+    
+    }
+    img{
+      width:100%;
+      border-radius: inherit;
+    }
+    .hover-elements{
+      position: absolute;
+      inset: 8px;
+      @include column-gap(16px);
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      border-radius: inherit;
+      background: rgba($black-2-rgb,.4);
+      transition: .4s;
+      opacity: 0;
+      a{
+        position: relative;
+        @include body-18;
+        color: $wild-sand;
+        left: 10px;
+        transition: .5s;
+        opacity: 0;
+        transition-delay: .1s;
+      }
+    }
+    transition: .4s;
+  }
+
+
+  &__body{
+    span{
+      @include body-16;
+      text-transform: uppercase;
+    }
+  }
+  &__title{
+    @include heading-24;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  &:hover{
+    .team-card__title{
+      a {
+        text-decoration: underline;
+      }
+    }
+    .team-card__image{
+      background-color: $primary;
+      border-color:transparent ;
+    }
+    .hover-elements{
+      opacity: 1;
+      a{
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

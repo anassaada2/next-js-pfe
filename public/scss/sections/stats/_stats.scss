@@ -1,0 +1,29 @@
+@use "../../abstract/" as *;
+/* ========== Stats Section Style ============= */
+.stats-section{
+    .row--custom{
+        justify-content: center;
+        --gutter-y: 40px;
+        @media (min-width:992px) {
+            align-items: center;
+        }
+    }
+    .stats-wrapper{
+        .stats-single-row{
+            --bs-gutter-y: 30px;
+            justify-content: center;
+        }
+        .stats-single{
+            align-items: center;
+            text-align: center;
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+            &__count{
+                color: $black-2;
+                @include heading-80;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}

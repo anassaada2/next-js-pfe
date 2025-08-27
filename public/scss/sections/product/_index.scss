@@ -1,0 +1,10 @@
+@use "./product-details";
+
+
+.product-section__head{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

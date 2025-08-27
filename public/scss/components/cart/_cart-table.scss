@@ -1,0 +1,131 @@
+@use "../../abstract/" as *;
+
+.cart-table {
+
+    @media (max-width: 768px) {
+        overflow-x: scroll;
+        min-width: 600px;
+    }
+    
+    &__head {
+        display: flex;
+        align-items: center;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+
+        div {
+            @include flex;
+
+            &:not(:first-child) {
+                width: 20%;
+            }
+
+            &:first-child {
+                width: 30%;
+                justify-content: flex-start;
+                padding-left: 0;
+
+                @media (min-width: 768px){
+                    padding-left: 180px;
+                    width: 40%;
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: 500;
+                color: $dusty-gray;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__body {
+        /* ----- Cart Item ----- */
+        .item-block {
+            padding-top: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        /* ----- Cart Content Block ----- */
+        .content {
+            &-block {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                width: 30%;
+
+                @media (min-width: 768px){
+                    align-items: center;
+                    gap: 20px;
+                    width: 40%;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    color: $black-2;
+                    font-size: 20px;
+                    width: 22px;
+                    height: 22px;
+                    @include flex;
+                }
+            }
+
+            &-media {
+                display: flex;
+                align-items: center;
+                flex-direction: column-reverse;
+                gap: 12px;
+
+                @media (min-width: 768px){
+                    flex-direction: row;
+                    gap: 28px;
+                }
+
+                img {
+                    width: 110px;
+                    height: 110px;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $black-2;
+                }
+            }
+        }
+
+        /* ----- Cart Price Block ----- */
+        .price-block {
+            @include flex;
+            width: 20%;
+
+            p {
+                font-size: 16px;
+                color: $black-2;
+            }
+        }
+
+        /* ----- Cart Quantity Block ----- */
+        .quantity-block {
+            @include flex;
+            width: 20%;
+        }
+
+        /* ----- Cart Total Block ----- */
+        .total-block {
+            width: 20%;
+            @include flex;
+
+            p {
+                font-size: 16px;
+                color: $black-2;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@use "../../abstract" as *;
+/* ========== Components: Service Card Style ============= */
+.service-card {
+  --gap-60: 60px;
+  --card-padding: 40px;
+  --card-padding-sm: 30px;
+  --translate-y: 90px;
+  background-color: #fff;
+  overflow-y: hidden;
+  position: relative;
+  padding: var(--card-padding-sm);
+  @media (min-width: 576px) {
+    padding: var(--card-padding);
+  }
+  @media (min-width: 992px) {
+    padding-top: 60px;
+  }
+  &__icon {
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      min-height: 120px;
+    }
+  }
+  &__title {
+    @include heading-24;
+    text-transform: uppercase;
+    min-height: 90x;
+    margin-bottom: 16px;
+  }
+  &__body {
+    padding-bottom: 40px;
+    @media (min-width: 992px) {
+      transition: 0.4s;
+      padding-bottom: 100px;
+    }
+    p {
+      @include body-18;
+    }
+  }
+  &__footer {
+    margin-top: auto;
+    @media (min-width: 992px) {
+      margin-top: 0;
+      position: absolute;
+      bottom: var(--card-padding);
+      left: var(--card-padding);
+      right: var(--card-padding);
+      transition: 0.4s;
+    }
+  }
+
+  &__body,
+  &__footer {
+    @media (min-width: 992px) {
+      transform: translateY(var(--translate-y));
+    }
+  }
+  &:hover {
+    @media (min-width: 992px) {
+      .service-card__body,
+      .service-card__footer {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &--small {
+    --card-padding: 30px;
+    --translate-y: 78px;
+    .service-card__icon {
+      height: 80px;
+      min-height: 80px;
+      img {
+        height: 100%;
+      }
+    }
+
+    .service-card__body {
+      @media (min-width: 992px) {
+        padding-bottom: 86px;
+      }
+    }
+  }
+}
+
+.icon-service {
+  font-size: 44px;
+}

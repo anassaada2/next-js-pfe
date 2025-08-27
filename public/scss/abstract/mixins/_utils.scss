@@ -1,0 +1,456 @@
+@use "../functions" as *;
+
+@mixin flex($display: flex) {
+  display: $display;
+  justify-content: center;
+  align-items: center;
+}
+@mixin square-rem($size, $corner) {
+  min-width: rem($size);
+  max-width: rem($size);
+  min-height: rem($size);
+  max-height: rem($size);
+  border-radius: rem($corner);
+}
+
+@mixin size-rem($sizeX, $sizeY: $sizeX) {
+  min-width: rem($sizeX);
+  max-width: rem($sizeX);
+  min-height: rem($sizeY);
+  max-height: rem($sizeY);
+  height: rem($sizeY);
+  width: rem($sizeX);
+}
+
+@mixin square($size, $corner) {
+  min-width: $size;
+  max-width: $size;
+  min-height: $size;
+  max-height: $size;
+  border-radius: $corner;
+}
+
+@mixin size($sizeX, $sizeY: $sizeX) {
+  min-width: $sizeX;
+  max-width: $sizeX;
+  min-height: $sizeY;
+  max-height: $sizeY;
+  height: $sizeY;
+  width: $sizeX;
+}
+@mixin row-gap($val:24px,$display:flex) {
+  display: $display;
+  flex-direction: column;
+  row-gap: $val;
+}
+@mixin column-gap($val:24px,$display:flex) {
+  display: $display;
+  column-gap: $val;
+}
+@mixin gap($val:24px,$display:flex) {
+  display: flex;
+  gap: $val;
+}
+
+@mixin translateCenter() {
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin absolute($x: 0, $y: 0, $zIndex: unset) {
+  position: absolute;
+  top: $x;
+  left: $y;
+  z-index: $zIndex;
+}
+@mixin absolute-left-bottom($x: 0, $y: 0, $zIndex: unset) {
+  position: absolute;
+  bottom: $x;
+  left: $y;
+  z-index: $zIndex;
+}
+
+@mixin absolute-right-bottom($x: 0, $y: 0, $zIndex: unset) {
+  position: absolute;
+  bottom: $x;
+  right: $y;
+  z-index: $zIndex;
+}
+
+@mixin absolute-reverse($x: 0, $y: 0, $zIndex: unset) {
+  position: absolute;
+  bottom: $x;
+  right: $y;
+  z-index: $zIndex;
+}
+
+@mixin absolute-full-custom($x: 0, $y: 0, $sizeY: 100%, $sizeX: 100%, $zIndex: unset) {
+  position: absolute;
+  top: $x;
+  left: $y;
+  height: $sizeY;
+  width: $sizeX;
+  z-index: $zIndex;
+}
+@mixin absolute-full($zIndex: unset) {
+  position: absolute;
+  inset: 0;
+  z-index: $zIndex;
+}
+
+@mixin text-gradient($value) {
+  background-image: -webkit-linear-gradient(unquote($value));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin text-gradient-to-solid($value, $bg: transparent) {
+  background: $bg;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: $value;
+}
+
+@mixin margin-x-with-var($value: null, $negativeVal: null) {
+  @if ($negativeVal) {
+    margin-left: calc(-1 * var($value));
+    margin-right: calc(-1 * var($value));
+  }
+
+  @else {
+    margin-left: var($value);
+    margin-right: var($value);
+  }
+}
+
+@mixin margin-y-with-var($value: null, $negativeVal: null) {
+  @if ($negativeVal) {
+    margin-top: calc(var($value) * -1);
+    margin-bottom: calc(var($value) * -1);
+  }
+
+  @else {
+    margin-top: var($value);
+    margin-bottom: var($value);
+  }
+}
+
+@mixin py-rem($l: 0, $r: $l) {
+  padding-top: rem($l);
+  padding-bottom: rem($r);
+}
+
+@mixin px-rem($l: 0, $r: $l) {
+  padding-left: rem($l);
+  padding-right: rem($r);
+}
+
+@mixin mx-rem($l: 0, $r: $l) {
+  margin-left: rem($l);
+  margin-right: rem($r);
+}
+@mixin mx-auto{
+  margin-left:auto;
+  margin-right: auto;
+}
+@mixin image-radius($val){
+  border-top-left-radius: $val;
+    border-top-right-radius: $val;
+}
+@mixin my-rem($l: 0, $r: $l) {
+  margin-top: rem($l);
+  margin-bottom: rem($r);
+}
+
+@mixin py($l: 0, $r: $l) {
+  padding-top: $l;
+  padding-bottom: $r;
+}
+
+@mixin px($l: 0, $r: $l) {
+  padding-left: $l;
+  padding-right: $r;
+}
+
+@mixin mx($l: 0, $r: $l) {
+  margin-left: $l;
+  margin-right: $r;
+}
+
+@mixin my($l: 0, $r: $l) {
+  margin-top: $l;
+  margin-bottom: $r;
+}
+
+@mixin hide-scroll() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin fontSize($font-size, $letterSpacing: "initial", $lineHeight: 0) {
+  font-size: font-get($font-size, "font-size");
+
+  @if $lineHeight ==0 {
+    line-height: font-get($font-size, "line-height");
+  }
+
+  @else {
+    line-height: $lineHeight;
+  }
+
+  @if $letterSpacing =="initial" {
+    line-height: font-get($font-size, "letter-spacing");
+  }
+
+  @else {
+    letter-spacing: $letterSpacing;
+  }
+}
+
+@mixin line-height-reset($line-height) {
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+@mixin typography($typography) {
+  @each $variation in map-keys($typography) {
+    $line-height: map-deep-get($typography, $variation, "lineHeight");
+    $letter-spacing: map-deep-get($typography, $variation, "letterSpacing");
+    $font-weight: map-deep-get($typography, $variation, "fontWeight");
+    $font: map-deep-get($typography, $variation, "fontSize");
+    $prefixer: map-deep-get($typography, $variation, "prefixer");
+    $desktop: map-deep-get($typography, $variation, "desktops");
+    $list: ();
+
+    .#{$prefixer}-#{$variation} {
+      font-weight: $font-weight;
+
+      @if (type-of($font)==list) {
+        @each $fontSizes in $font {
+          $fontSize: if($fontSizes, map-get($fontSizes, "size"), $fontSizes);
+          $devices: if($fontSizes,
+            map-get($fontSizes, "breakpoint"),
+            $fontSizes );
+          $line-height-inner: if($fontSizes,
+            map-get($fontSizes, "lineHeight"),
+            $fontSizes );
+          $list: append($list, $fontSize, comma);
+
+          @if (length($list)==length($font)) {
+            $maxFontSize: max($list...);
+            letter-spacing: if($letter-spacing,
+                em($letter-spacing, $maxFontSize),
+                null);
+            line-height: if($line-height,
+                line-height($line-height, $maxFontSize),
+                null);
+          }
+
+          @each $breakpoint in $devices {
+            $sanitizedBreakpoint: if($breakpoint, $breakpoint, null);
+
+            @if ($sanitizedBreakpoint ==null) {
+              font-size: if($fontSize, rem($fontSize), null);
+            }
+
+            @else {
+              @if ($desktop) {
+                @media (max-width: $sanitizedBreakpoint) {
+                  font-size: if($fontSize, rem($fontSize), null);
+                  line-height: if($line-height-inner,
+                      line-height($line-height-inner, $fontSize),
+                      null);
+                }
+              }
+
+              @else {
+                @media (min-width: $sanitizedBreakpoint) {
+                  font-size: if($fontSize, rem($fontSize), null);
+                  line-height: if($line-height-inner,
+                      line-height($line-height-inner, $fontSize),
+                      null);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @else {
+        font-size: if($font, rem($font), null);
+        line-height: if($line-height, line-height($line-height), null);
+        letter-spacing: if($font, em($letter-spacing, $font), null);
+      }
+    }
+  }
+}
+
+
+@mixin text($font-size,$line-height,$letter-spacing:null,$em){
+  font-size: rem($font-size);
+  line-height: line-height($line-height,$size);
+  @if not $em{
+    letter-spacing: $letter-spacing;
+  }@else{
+    letter-spacing: em($letter-spacing,$size);
+  }
+  
+}
+@mixin section-padding-top($has-sp:false){
+  @if $has-sp{
+    @include py(50px,null);
+    @media (min-width: 768px) {
+      @include py(70px,null);
+    }
+    @media (min-width: 992px) {
+      @include py(121px,null);
+    }
+  }@else{
+    @include py(60px,null);
+    @media (min-width: 768px) {
+      @include py(80px,null);
+    }
+    @media (min-width: 992px) {
+      @include py(134px,null);
+    }
+  }
+  
+}
+@mixin section-padding($has-sp:false){
+  @if $has-sp{
+    @include py(50px,null);
+    @media (min-width: 768px) {
+      @include py(70px,80px);
+    }
+    @media (min-width: 992px) {
+     @include py(115px,120px);
+    }
+  }@else{
+    @include py(60px);
+    @media (min-width: 768px) {
+      @include py(80px);
+    }
+    @media (min-width: 992px) {
+      @include py(120px);
+    }
+    @media (min-width: 1200px) {
+      @include py(140px);
+    }
+  }
+}
+
+@mixin text-elipese($line){
+  text-overflow:ellipsis;
+  overflow:hidden;
+  // Addition lines for 2 line or multiline ellipsis
+  display: -webkit-box !important;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+// Hover Effect
+@mixin btn-animation-slide-both($bg, $color) {
+  // --hover-border-radius:4px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    background-color: $bg;
+    border-color: $bg;
+    // border-radius: var(--radius);
+  }
+
+  &:hover {
+    border-color: $bg;
+    color: $color;
+
+    &::before {
+      top: 0%;
+      bottom: auto;
+      height: 100%;
+    }
+  }
+}
+
+// Hover Effect
+@mixin btn-animation-slide-both-side($bg, $color) {
+  // --hover-border-radius:4px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: "";
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    background-color: $bg;
+    border-color: $bg;
+    // border-radius: var(--radius);
+  }
+
+  &:hover {
+    border-color: $bg;
+    color: $color;
+
+    &::before {
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+  }
+}
+
+
+@mixin sp-responsive(){
+  @media (max-width:991px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media (max-width:575px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@mixin link-color-reset{
+  a{
+    color: inherit;
+    &:hover{
+      color: inherit;
+    }
+  }
+}

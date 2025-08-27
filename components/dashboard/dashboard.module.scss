@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; // éviter scroll horizontal
+}
+
+.menu {
+  flex: 1;
+  background-color: var(--bgSoft);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 4;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px; // limite largeur desktop
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.side {
+  flex: 1;
+}
+
+.readMessage {
+  background-color: #d4edda; // vert clair
+}
+
+.unreadMessage {
+  background-color: #fff; // blanc
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+
+
+  .menu {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .content {
+    padding: 10px;
+
+    h1, h2, h3, h4, h5, h6, p, span, a {
+      font-size: 0.55rem !important; // texte petit
+    }
+
+    table {
+      font-size: 0.5rem;
+    }
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cards {
+    flex-direction: column; // cards en colonne
+    gap: 10px;
+  }
+
+  .card,
+  .card-body {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1px;
+    h1, h2, h3, h4, h5, h6, p, span, a {
+      font-size: 0.55rem !important; // encore plus petit
+    }
+
+    table {
+      font-size: 0.5rem;
+    }
+  }
+
+  .wrapper {
+    padding: 5px;
+  }
+
+  .cards {
+    gap: 6px;
+  }
+}

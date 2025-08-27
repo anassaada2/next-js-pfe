@@ -1,0 +1,9 @@
+@use "../abstract/" as *;
+/* ========== Components: Brand logo Style ============= */
+.brand {
+    &-logo {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        height: 50px;
+    }
+}

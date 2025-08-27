@@ -1,0 +1,40 @@
+@use '../../abstract' as *;
+.author-card{
+  @include column-gap(28px);
+  align-items: center;
+  border: 1px solid rgba($black-2-rgb, 0.10);
+  padding: 30px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  row-gap: 20px;
+  @media (min-width:576px){
+    flex-direction: row;
+    text-align: initial;
+    align-items: initial;
+  }
+  @media (min-width:768px){
+    padding: 40px;
+  }
+  &__image{
+    @include square(140px,500px);
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: inherit;
+    }
+  }
+  &__name{
+    margin-bottom: 4px;
+    @include heading-24;
+  }
+  &__position{
+    @include body-16;
+  }
+  p{
+    margin-bottom: 20px;
+    color: $black-2;
+  }
+}

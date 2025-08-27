@@ -1,0 +1,12 @@
+@use '../../abstract' as *;
+
+.product-details{
+  &__image{
+    @include row-gap(16px);
+    .product-image-thumbnail{
+      img{
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use '../../abstract' as *;
+.single-page-content{
+  p{
+    @include body-18;
+    margin-bottom: 20px;
+  }
+}

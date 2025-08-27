@@ -1,0 +1,39 @@
+.titre-departement {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+@media (min-width: 768px) {
+  .section-departement {
+    gap: 50px;
+  }
+  .image-departement {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .section-departement {
+    gap: 50px;
+  }
+  .image-departement {
+    width: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .aaa {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1400px) {
+  .aaa {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .hero-departement {
+    h3 {
+      font-size: 40px;
+    }
+    h6 {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@use "../../abstract/" as *;
+
+.offcanvas {
+    background-color: $primary-hex;
+    width: 569px !important;
+    height: 100vh;
+
+    & > *::-webkit-scrollbar {
+        width: 2px;
+        background: transparent;
+    }
+
+    & > *::-webkit-scrollbar-thumb {
+        background: $black-2;
+    }
+
+    & > *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &-header {
+        justify-content: flex-end;
+        padding: 40px 48px;
+
+        .close-btn {
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding: 0 80px 60px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 32px;
+        }
+    }
+
+    &-contact-widget {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        .contact-widget {
+            max-width: 194px;
+        }
+    }
+
+    &-footer {
+        padding: 0 80px 60px;
+    }
+
+    &-social-links {
+        display: flex;
+        gap: 16px;
+
+        a {
+            display: flex;
+            gap: 12px;
+            color: #050505;
+        }
+    }
+}

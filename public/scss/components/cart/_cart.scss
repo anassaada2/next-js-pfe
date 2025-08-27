@@ -1,0 +1,111 @@
+@use "../../abstract/" as *;
+
+/* ----- Cart Item ----- */
+.cart {
+    &-total {
+        &-block {
+            margin-top: 40px;
+
+            @media (min-width: 480px){
+                margin-top: 60px;
+            }
+
+            @media (min-width: 768px){
+                margin-top: 100px;
+            }
+    
+            h3 {
+                @include heading-26;
+
+                @media (min-width: 480px){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &-item {
+            border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+            padding-top: 16px;
+            padding-bottom: 16px;
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 480px){
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+
+            p {
+                width: 100px;
+
+                @media (min-width: 576px){
+                    width: 330px;
+                }
+            }
+        }
+
+        &-checkout-btn {
+            margin-top: 24px;
+
+            @media (min-width: 480px){
+                margin-top: 32px;
+            }
+
+            @media (min-width: 768px){
+                margin-top: 48px;
+            }
+        }
+    }
+
+    &-coupon-block {
+        width: 100%;
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+
+        @media (min-width: 768px){
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 48px;
+            gap: 20px;
+        }
+
+        .coupon-form {
+            display: flex;
+            border: 1px solid rgba(5, 5, 5, 0.1);
+            width: 100%;
+
+            @media (min-width: 768px){
+                max-width: 378px;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                width: 100%;
+                font-size: 16px;
+                color: $black-2;
+                background-color: #FFF;
+            }
+
+            .btn-coupon {
+                border: none;
+            }
+        }
+
+        .btn-cart {
+            width: 100%;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+
+            @media (min-width: 768px){
+                width: initial;
+            }
+        }
+    }
+}

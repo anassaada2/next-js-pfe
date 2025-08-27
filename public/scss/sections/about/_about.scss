@@ -1,0 +1,28 @@
+@use "../../abstract" as *;
+/* ==========  ABout Section Style ============= */
+
+.about {
+  &-section {
+    .content-text-block {
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        text-align: center;
+        align-items: center;
+        @media (min-width: 992px) {
+          text-align: initial;
+          align-items: initial;
+          row-gap: 60px;
+        }
+      }
+    }
+  }
+}
+.afec-span {
+  color: rgb(255, 162, 0);
+}
+
+span {
+  color: green;
+}

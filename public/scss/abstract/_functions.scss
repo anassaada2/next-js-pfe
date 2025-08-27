@@ -1,0 +1,51 @@
+// @function pxToEm($val, $fs) {
+//     @return calc($val / $fs);
+// }
+@use "sass:math";
+@function hexToString($hexColor) {
+
+    // 0.999999 val in alpha actually compiles to 1.0
+    $rgbaVal: inspect(rgba($hexColor,0.9999999));
+  
+    // slice substring between 'rgba(' and '1.0)' 
+    @return str-slice($rgbaVal, 6, str-length($rgbaVal)-6);
+  
+  }
+@function em($px: 16, $context: 16) {
+    @return math.div($px , $context)* 1em;
+}
+
+@function line-height($val: 16, $fs: 16) {
+    @return math.div($val , $fs);
+}
+
+@function rem($px: 16) {
+    @return math.div($px , 16)+rem;
+}
+
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+@function get-max($map, $key) {
+    $list: ();
+
+    // Loop through each item in the map
+    @each $map-key,
+    $sub-map in $map {
+        // Add the desired value to our list, from the sub-map
+        $list: append($list, map-get($sub-map, $key), comma);
+    }
+
+    // Get the largest number from our list
+    @return max($list...);
+}
+
+@function to-rgb($value) {
+    @return red($value), green($value), blue($value);
+}

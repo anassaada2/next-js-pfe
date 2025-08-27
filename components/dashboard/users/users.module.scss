@@ -1,0 +1,94 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addButton {
+  padding: 10px;
+  background-color: #61c957;
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse; /* Supprime les espaces entre cellules */
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.view {
+  background-color: teal;
+}
+
+.delete {
+  background-color: crimson;
+}
+
+/* Mobile ultra compact */
+@media (max-width: 576px) {
+  .table th,
+  .table td {
+    padding: 1px 3px;
+    font-size: 8px; /* Texte plus petit */
+  }
+
+  .user {
+    gap: 3px;
+  }
+
+  .user span {
+    font-size: 10px;
+  }
+
+  .buttons {
+    gap: 3px;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+
+  .img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}

@@ -1,0 +1,14 @@
+@use "~bootstrap/scss/bootstrap.scss";
+@use "./helpers/base";
+@use "./helpers/overrides";
+@use "./helpers/common";
+@use "./components";
+@use "./sections";
+@use "./helpers/typography";
+@use "./helpers/spacings";
+@use "./helpers/utilities";
+
+// fontawesome icons
+@use "./../fonts/fontawesome/scss/fontawesome.scss";
+@use "./../fonts/fontawesome/scss/solid.scss";
+@use "./../fonts/fontawesome/scss/brands.scss";

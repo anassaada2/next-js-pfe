@@ -1,0 +1,11 @@
+@use "./variable" as *;
+// Create css Variables (helpers/_base.scss  file)
+// Create Color (helpers/_base.scss  file)
+$css-color-vars: (
+  bs-primary: $primary-hex,
+  wild-sand: $wild-sand-hex,
+  dusty-gray: $dusty-gray-hex,
+  black-2: $black-2-hex,
+  black-solid: $black-solid-hex,
+  scorpion: $scorpion-hex,
+);

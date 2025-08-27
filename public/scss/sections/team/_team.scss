@@ -1,0 +1,17 @@
+/* ========== Team Section Style ============= */
+
+.team-section{
+  position: relative;
+  z-index: 1;
+  &__shape{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 45%;
+    max-width: 647px;
+    img{
+      width: 100%;
+    }
+  }
+}

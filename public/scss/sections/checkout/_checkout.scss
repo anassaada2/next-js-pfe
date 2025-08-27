@@ -1,0 +1,151 @@
+@use "../../abstract" as *;
+/* ==========  checkout Section Style ============= */
+
+.checkout {
+    &-section {
+        .redeem-block {
+            background-color: $wild-sand;
+            padding: 32px 28px;
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+
+            span {
+                @include body-18;
+
+                a {
+                    span {
+                        @include body-18(500);
+                    }
+
+                    color: $black-2;
+                }
+            }
+        }
+
+        .checkout-form {
+            h4 {
+                @include body-16(500);
+                color: $dusty-gray;
+                text-transform: uppercase;
+
+                span {
+                    color: $black-2;
+                }
+
+                margin-bottom: 12px;
+            }
+            .nice-select {
+                font-size: 18px;
+                height: 56px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                width: 100%;
+            
+                & .list {
+                    width: 100%;
+                }
+
+                &:after{
+                    content: "\f107";
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    border: 0;
+                    height: 22px;
+                    margin-top: 0;
+                    width: 22px;
+                    right: 24px;
+                    transform-origin: 50% 50%;
+                    top: 50%;
+                    transform: rotate(0);
+                    transform-box: fill-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: -11px;
+                    margin-right: -5px;
+                  }
+                  &.open{
+                    &:after{
+                      transform: rotate(180deg) ;
+                    }
+                  }
+            }
+        }
+
+        .order-bottom-block {
+            margin-top: 40px;
+
+            label {
+                @include body-18;
+                color: $black-2;
+            }
+
+            h4 {
+                @include body-18(500);
+                margin-top: 28px;
+                margin-bottom: 12px;
+            }
+
+            p {
+                margin-bottom: 30px;
+
+                @media (min-width:992px) {
+                    margin-bottom: 40px;
+                }
+
+                a {
+                    text-decoration: underline;
+                    color: $black-2;
+                    font-weight: 500;
+                }
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                #cart-select {
+                    accent-color: black;
+                    height: 18px;
+                    width: 18px;
+                }
+
+            }
+        }
+
+        ul {
+            &>* {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(5, 5, 5, 0.10);
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .order-item-details {
+                @include body-16(500);
+                color: $dusty-gray;
+            }
+
+            .order-item-single {
+                @include body-16;
+                color: $black-2;
+            }
+
+            .order-item-total {
+                @include body-18(500);
+                color: $black-2;
+            }
+        }
+    }
+
+    &-form-bottom {
+        margin-top: 40px;
+
+        @media (min-width:992px) {
+            margin-top: 60px;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+@mixin hero-02-sp{
+  padding-bottom: 80px;
+  padding-top: 100px;
+  @media (min-width:576px){
+      padding-bottom: 200px;
+      padding-top: 120px;
+  }
+  @media (min-width:992px){
+      padding-bottom: 220px;
+      padding-top: 160px;
+  }
+  @media (min-width:1200px){
+      padding-bottom: 260px;
+      padding-top: 200px;
+  }
+  @media (min-width:1400px){
+      padding-bottom: 320px;
+      padding-top: 250px;
+  }
+}
+
+@mixin btn-fill-animation($fill-color,$element-color){
+    position: relative;
+  z-index: 1;
+  &:before ,&:after{
+    content: "";
+    background: $fill-color;
+    position: absolute;
+    z-index: -1;
+    transition: .4s;
+    width: 0%;
+  }
+  &::before{
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: auto;
+  }
+  &::after{
+    bottom: 0;
+    top: 50%;
+    right: 0;
+    left: auto;
+  }
+ 
+
+&:hover{
+    color: $element-color;
+    border-color: $fill-color;
+  &:before{
+    width: 100%;
+    left: auto;
+    right: 0;
+  }
+  &:after {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+}
+}
+@mixin btn-fill-animation($fill-color,$element-color){
+    position: relative;
+  z-index: 1;
+  &:before{
+    content: "";
+    background: $fill-color;
+    position: absolute;
+    z-index: -1;
+    transition: .4s;
+    width: 0%;
+  }
+  // &:before ,&:after{
+  //   content: "";
+  //   background: $fill-color;
+  //   position: absolute;
+  //   z-index: -1;
+  //   transition: .4s;
+  //   width: 0%;
+  // }
+  &::before{
+    top: 0;
+    bottom: 0%;
+    left: 0;
+    right: auto;
+  }
+  // &::after{
+  //   bottom: 0;
+  //   top: 50%;
+  //   right: 0;
+  //   left: auto;
+  // }
+ 
+
+&:hover{
+    color: $element-color;
+    border-color: $fill-color;
+  &:before{
+    width: 100%;
+    left: auto;
+    right: 0;
+  }
+  // &:after {
+  //   width: 100%;
+  //   right: auto;
+  //   left: 0;
+  // }
+}
+}

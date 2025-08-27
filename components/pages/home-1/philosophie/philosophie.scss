@@ -1,0 +1,26 @@
+.philosophie-pa {
+  font-size: 16px; // Default font size for small screens
+  max-width: 1100px;
+
+  overflow: hidden; /* Empêche tout débordement horizontal */
+
+  @media (min-width: 768px) {
+    // md breakpoint
+    font-size: 15px;
+  }
+
+  @media (min-width: 992px) {
+    // lg breakpoint
+    font-size: 25px;
+  }
+
+  @media (min-width: 1200px) {
+    // xl breakpoint
+    font-size: 30px;
+  }
+
+  @media (min-width: 1400px) {
+    // xxl breakpoint
+    font-size: 35px;
+  }
+}

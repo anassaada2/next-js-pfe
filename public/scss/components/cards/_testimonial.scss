@@ -1,0 +1,28 @@
+@use '../../abstract' as *;
+/* ========== Components: Testimonial Card Style ============= */
+.testimonial-card{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 30px;
+  @media (min-width:768px){
+    padding: 60px 40px;
+  }
+  .rating-block{
+    margin-bottom: 20px;
+  }
+  p{
+    @include body-18;
+    margin-bottom: 32px;
+  }
+  .user-block{
+    text-align: center;
+    @include row-gap(4px);
+    align-items: center;
+    span{
+      @include body-16;
+    }
+  }
+}

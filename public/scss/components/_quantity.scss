@@ -1,0 +1,51 @@
+@use "../abstract/" as *;
+
+/* ----- Quantity ----- */
+
+.quantity {
+    @include flex;
+    
+    p {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-weight: 500;
+    }
+
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        color: $black-2;
+        font-size: 20px;
+        width: 22px;
+        height: 22px;
+        @include flex;
+    }
+};
+
+
+.quantity-02 {
+    padding: 16px 28px;
+    border: 1px solid rgba(5, 5, 5, 0.10);
+    @include flex;
+    max-width: 131px;
+    max-height: 56px;
+    
+    p {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-weight: 500;
+        margin-bottom: 0 !important;
+    }
+
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        color: $black-2;
+        font-size: 20px;
+        width: 22px;
+        height: 22px;
+        @include flex;
+    }
+};

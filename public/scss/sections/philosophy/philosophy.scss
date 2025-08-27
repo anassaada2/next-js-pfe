@@ -1,0 +1,8 @@
+// styles/custom.scss
+
+.ligne-horizontale {
+  border-top: 2px solid #7de13b; // Couleur et épaisseur de la ligne
+  max-width: 400px; // Largeur maximale de la ligne
+  width: 100%; // La ligne occupe 100% de la largeur disponible jusqu'à 400px
+  margin: 0 auto; // Centrer la ligne horizontalement
+}

@@ -1,0 +1,63 @@
+@use "../../abstract" as *;
+/* ========== Brand Section Style ============= */
+.brand {
+  &-section {
+    .brand-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      align-items: flex-start;
+      align-content: flex-start;
+      justify-content: flex-start;
+      margin: 0 13px;
+      animation-name: ticker;
+
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      column-gap: 50px;
+      animation-duration: 5s;
+      @media (min-width: 768px) {
+        animation-duration: 10s;
+        column-gap: 100px;
+      }
+      @media (min-width: 992px) {
+        animation-duration: 20s;
+        column-gap: 170px;
+      }
+      @media (min-width: 1400px) {
+        animation-duration: 30s;
+      }
+      .icon-single {
+        img {
+          opacity: 0.7;
+          margin-top: 40px;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0, 0, 0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ticker-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

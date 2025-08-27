@@ -1,0 +1,32 @@
+<svg width="126" height="22" viewBox="0 0 126 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1_4977" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
+<rect width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_4977)">
+<path d="M5.33828 20.1667L6.82786 13.7271L1.83203 9.39583L8.43203 8.82292L10.9987 2.75L13.5654 8.82292L20.1654 9.39583L15.1695 13.7271L16.6591 20.1667L10.9987 16.7521L5.33828 20.1667Z" fill="#050505"/>
+</g>
+<mask id="mask1_1_4977" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="26" y="0" width="22" height="22">
+<rect x="26" width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask1_1_4977)">
+<path d="M31.3383 20.1667L32.8279 13.7271L27.832 9.39583L34.432 8.82292L36.9987 2.75L39.5654 8.82292L46.1654 9.39583L41.1695 13.7271L42.6591 20.1667L36.9987 16.7521L31.3383 20.1667Z" fill="#050505"/>
+</g>
+<mask id="mask2_1_4977" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="52" y="0" width="22" height="22">
+<rect x="52" width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask2_1_4977)">
+<path d="M57.3383 20.1667L58.8279 13.7271L53.832 9.39583L60.432 8.82292L62.9987 2.75L65.5654 8.82292L72.1654 9.39583L67.1695 13.7271L68.6591 20.1667L62.9987 16.7521L57.3383 20.1667Z" fill="#050505"/>
+</g>
+<mask id="mask3_1_4977" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="78" y="0" width="22" height="22">
+<rect x="78" width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask3_1_4977)">
+<path d="M83.3383 20.1667L84.8279 13.7271L79.832 9.39583L86.432 8.82292L88.9987 2.75L91.5654 8.82292L98.1654 9.39583L93.1695 13.7271L94.6591 20.1667L88.9987 16.7521L83.3383 20.1667Z" fill="#050505"/>
+</g>
+<mask id="mask4_1_4977" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="104" y="0" width="22" height="22">
+<rect x="104" width="22" height="22" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask4_1_4977)">
+<path d="M109.338 20.1667L110.828 13.7271L105.832 9.39583L112.432 8.82292L114.999 2.75L117.565 8.82292L124.165 9.39583L119.17 13.7271L120.659 20.1667L114.999 16.7521L109.338 20.1667Z" fill="#050505"/>
+</g>
+</svg>

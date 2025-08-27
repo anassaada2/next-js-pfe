@@ -1,0 +1,94 @@
+@use "../abstract" as *;
+/* ========== Components: Navigation Style ============= */
+.divider-navigation-inline {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  li {
+    @include body-18(500);
+    &.active,&:hover {
+      &>button,&>a,&>span {
+        &::before{
+          width: 100%;
+        }
+      }
+    }
+    &>button,&>a,&>span {
+      position: relative;
+      color: $black-2;
+      &::before {
+        content: "";
+        height: 2px;
+        width: 0%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-color: $black-2;
+        transition: .4s;
+      }
+      &.active {
+        &::before{
+          width: 100%;
+        }
+      }
+    }
+    &::after {
+      content: "/";
+      padding-left: 14px;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &.fw-regular{
+    li{
+      font-weight: 400;
+    }
+  }
+  &.hvr-underline{
+    li{
+      &:hover{
+        >*{
+          &::before{
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-style-regular {
+  color: $wild-sand;
+  margin-bottom: 0;
+  @include row-gap(12px);
+  li {
+    @include row-gap(24px);
+    &>button,&>a,&>span {
+      color: inherit;
+      @include body-18;
+    }
+  }
+}
+
+.list-style-bullet{
+  margin-bottom: 0;
+  @include row-gap(12px);
+  li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    @include body-18(500);
+    &::before{
+      content: "";
+      height: 6px;
+      width: 6px;
+      display: inline-block;
+      background-color: $black-2;
+      border-radius: 500px;
+    }
+  }
+}

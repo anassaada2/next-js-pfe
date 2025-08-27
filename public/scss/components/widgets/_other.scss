@@ -1,0 +1,35 @@
+@use '../../abstract' as *;
+.comment-widget{
+  display: flex;
+  row-gap: 20px;
+  column-gap: 24px;
+  flex-direction: column;
+  @media (min-width:576px){
+    flex-direction: row;
+  }
+  &__image{
+    @include square(80px,500px);
+  }
+  &__username{
+    @include heading-20;
+    margin-bottom: 4px;
+  }
+  &__footer{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  p{
+    @include body-18;
+    margin-bottom: 16px !important;
+  }
+  span{
+    @include body-18;
+  }
+  .btn-replay{
+    @include body-18(500);
+    color: $black-2;
+    @include column-gap(4px);
+    align-items: center;
+  }
+}

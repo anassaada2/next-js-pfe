@@ -1,0 +1,117 @@
+@use "../abstract" as *;
+/*======= Base Class ========*/
+:root {
+    @each $k, $v in $css-color-vars {
+        --#{$k}: #{$v};
+        --#{$k}-rgb: #{to-rgb($v)};
+    }
+    // @each $k,$v in $css-other-vars{
+    //   --#{$k}:#{$v};
+    // }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--space-grotesk);
+    font-size: 1rem;
+    line-height: 1.67;
+    color: $black-2;
+}
+span,
+a {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding-left: initial;
+}
+img {
+    display: block;
+}
+h1,
+h2 {
+    text-transform: uppercase;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--space-grotesk);
+    color: $black-2;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.67;
+    margin-bottom: initial;
+    font-family: var(--space-grotesk);
+    @media (min-width: 576px) {
+        font-size: 18px;
+    }
+}
+
+.btn-reset {
+    border: 0;
+    background: 0;
+    outline: none;
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        border: 0;
+    }
+}
+
+.preloader-wrapp {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    .bar {
+        position: absolute;
+        width: 33.333%;
+        background-color: $primary;
+        height: 100%;
+        left: 0;
+        transition: 0.5s;
+        &:nth-child(2) {
+            left: 33.333%;
+        }
+        &:nth-child(3) {
+            left: calc(33.333% * 2);
+        }
+    }
+    .loaded & {
+        pointer-events: none;
+        .bar {
+            width: 0;
+        }
+    }
+}
+
+.anchor-color-reset {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}

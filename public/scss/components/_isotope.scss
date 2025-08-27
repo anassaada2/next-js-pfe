@@ -1,0 +1,40 @@
+@use "../abstract/" as *;
+/* ========== Components: ISotope Style ============= */
+.portfolio-v2 {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* ========== Grid Item ============= */
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .grid-item {
+        width: 100%;
+        padding: 12px;
+
+        &-big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .grid-item-big {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        .grid-item-big {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+}

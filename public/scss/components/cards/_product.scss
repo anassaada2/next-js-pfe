@@ -1,0 +1,64 @@
+@use '../../abstract' as *;
+/* ========== Components: Service Card Style ============= */
+.product-card{ 
+ display: flex;
+ flex-direction: column;
+ row-gap: 28px;
+ background-color: $wild-sand;
+  &__image  { 
+    position: relative;
+    &::before{
+      content: "";
+      inset: 0;
+      background-color: $wild-sand;
+      position: absolute;
+      opacity: 0;
+      transition: .4s;
+      pointer-events: none;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__cart-button{
+    opacity: 0;
+    transform: translateY(10px);
+    @include square(56px,500px);
+    @include flex;
+    background-color: $primary;
+    transition: .4s;
+    img{
+      width: 15px;
+    }
+  }
+  &__body { 
+    padding-left: 32px;
+    padding-bottom: 40px;
+  }
+  &__title { 
+    @include heading-24;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+ 
+&__price{
+  @include body-16;
+  text-transform: uppercase;
+}
+&:hover{
+  opacity: 1;
+  .product-card__title{
+    
+    text-decoration: underline;
+  }
+  .product-card__image{
+    &::before{
+      opacity: .4;
+    }
+  }
+  .product-card__cart-button{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+}

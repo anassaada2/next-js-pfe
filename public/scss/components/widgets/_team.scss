@@ -1,0 +1,46 @@
+@use '../../abstract' as *;
+/* ========== Components: Team Widget Style ============= */
+.team-join-widget{
+  @include flex;
+  align-items: center;
+  height: 100%;
+  .widget-icon{
+    max-width: 40px;
+    img{
+      width: 100%;
+    }
+  }
+  p{
+    @include body-18;
+    border-bottom:1px solid rgba($black-2-rgb, 0.10);
+    padding-bottom: 16px;
+  }
+  .widget-link{
+    a{
+      @include body-18(500);
+      @include column-gap(10px);
+      align-items: center;
+      color: $black-2;
+    }
+  }
+  &__inner{
+    max-width: 224px;
+    text-align: center;
+    @include row-gap(16px);
+    align-items: center;
+  }
+}
+
+
+
+.social-list-widget{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 40px;
+    a{
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+}

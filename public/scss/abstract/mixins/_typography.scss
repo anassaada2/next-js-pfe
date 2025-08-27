@@ -1,0 +1,155 @@
+
+@use "../functions";
+@mixin heading-96{
+  font-weight: 500;
+  line-height: 1.15;
+  font-size: 42px;
+  @media (min-width: 480px) {
+    font-size: 46px;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 50px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 68px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 80px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 96px;
+  }
+}
+
+@mixin heading-80 {
+  font-weight: 500;
+  line-height: 1.18;
+  font-size: 38px;
+
+  @media (min-width: 480px) {
+    font-size: 42px;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 48px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 72px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 80px;
+  }
+}
+
+@mixin heading-60 {
+  font-weight: 500;
+  line-height: 1.23;
+  font-size: 34px;
+
+  @media (min-width: 480px) {
+    font-size: 42px;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 42px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 48px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 52px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 60px;
+  }
+}
+
+@mixin heading-44 {
+  font-weight: 500;
+  line-height: 1.27;
+  font-size: 28px;
+  @media (min-width:576px) {
+    font-size: 32px;
+  }
+
+  @media (min-width:992px) {
+    font-size: 38px;
+  }
+
+  @media (min-width:1200px) {
+    font-size: 44px;
+  }
+}
+@mixin heading-26{
+  font-weight: 500;
+  line-height: 1.38;
+  font-size: 20px;
+  @media (min-width:768px){
+    font-size: 22px;
+  }
+  @media (min-width:992px){
+    font-size: 26px;
+  }
+}
+@mixin heading-24{
+  font-weight: 500;
+  line-height: 1.42;
+  font-size: 18px;
+  @media (min-width:768px){
+    font-size: 22px;
+  }
+  @media (min-width:992px){
+    font-size: 24px;
+  }
+}
+
+@mixin heading-20($fw:500) {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: $fw;
+  @media (min-width:576px){
+    font-size: 20px;
+  }
+}
+@mixin body-28($fw:null) {
+  line-height:1.7142857142857142;
+  font-weight: $fw;
+  font-size: 20px;
+  @media (min-width:576px){
+    font-size: 24px;
+  }
+  @media (min-width:992px){
+    font-size: 28px;
+  }
+}
+
+@mixin body-18($fw:400) {
+  font-size: 16px;
+  font-weight: $fw;
+  line-height: 1.67;
+  @media (min-width:576px){
+    font-size: 18px;
+  }
+}
+
+
+
+
+@mixin body-16($fw:400){
+  font-weight: $fw;
+  font-size: 16px;
+  line-height: 1.5;
+}
