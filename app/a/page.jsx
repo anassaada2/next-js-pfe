@@ -81,7 +81,7 @@ export default async function Dashboard() {
             <th>Pays</th>
             <th>Consultants</th>
             <th>Vues</th>
-            <th>Sessionss</th>
+            <th>Sessionssz</th>
           </tr>
         </thead>
         <tbody>
