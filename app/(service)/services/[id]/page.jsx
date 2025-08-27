@@ -27,7 +27,7 @@ async function page({ params }) {
                 <Image
                   height={606}
                   width={1116}
-                  src="/image/AFEC/equipe.jpg"
+                  src="/image/AFEC/equipe.JPG"
                   alt="service image"
                   className="w-100 h-auto"
                 />

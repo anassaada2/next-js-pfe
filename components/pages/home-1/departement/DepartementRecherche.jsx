@@ -8,7 +8,7 @@ function DepartementRecherche() {
         <div className="d-flex    align-items-center  align-items-md-start                    flex-column  flex-md-row  container  section-departement                 ">
           {" "}
           <Image
-            src="/image/AFEC/departement-recherche.jpg"
+            src="/image/AFEC/departement-recherche.JPG"
             width={250}
             height={250}
             className="img-fluid  image-departement        "

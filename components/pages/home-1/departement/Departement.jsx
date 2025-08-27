@@ -12,7 +12,7 @@ function Departement() {
         <div className="d-flex align-items-center  align-items-md-start   flex-column  flex-md-row  container  section-departement                 ">
           {" "}
           <Image
-            src="/image/AFEC/equipe.jpg"
+            src="/image/AFEC/equipe.JPG"
             width={250}
             height={250}
             className="img-fluid  image-departement        "
