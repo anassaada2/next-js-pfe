@@ -20,11 +20,17 @@ export default function Login() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    if (status === "authenticated") {
-      console.log("Utilisateur connecté :", session?.user);
-      router.push("/dashboard");
+    if (status === "authenticated" && session?.user) {
+      const role = session.user.role;
+      if (role === "admin") {
+        router.push("/dashboard");
+      } else {
+        router.push("/");
+      }
     }
+   
   }, [status, session, router]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

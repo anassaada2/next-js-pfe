@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function middleware(req) {
   const { pathname } = req.nextUrl;
 
-  const protectedPrefixes = ["/dashboards"];
+  const protectedPrefixes = ["/dashboard"];
   const isProtected = protectedPrefixes.some((prefix) =>
     pathname.startsWith(prefix)
   );

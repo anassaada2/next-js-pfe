@@ -27,14 +27,14 @@ export const brands = [
     img: "/image/AFEC/brand2.png",
   },
   {
-    img: "/image/AFEC/brand3.jpg",
+    img: "/image/AFEC/brand3.JPG",
   },
   {
-    img: "/image/AFEC/brand4.jpg",
+    img: "/image/AFEC/brand4.JPG",
   },
 
   {
-    img: "/image/AFEC/brand5.jpg",
+    img: "/image/AFEC/brand5.JPG",
   },
 ];
 
@@ -781,28 +781,10 @@ export const menuItemsDashboard = [
         icon: <MdOutlineBarChart />,
       },
 
-      {
-        title: "Teams",
-        path: "/dashboard/teams",
-        icon: <MdPeople />,
-      },
+  
     ],
   },
-  {
-    title: "User",
-    list: [
-      {
-        title: "Settings",
-        path: "/dashboard/settings",
-        icon: <MdOutlineSettings />,
-      },
-      {
-        title: "Help",
-        path: "/dashboard/help",
-        icon: <MdHelpCenter />,
-      },
-    ],
-  },
+  
 ];
 export const cards = [
   {

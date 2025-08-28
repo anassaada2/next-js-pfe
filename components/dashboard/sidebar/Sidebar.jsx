@@ -6,6 +6,7 @@ import { MdLogout } from "react-icons/md";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/nextAuth";
 import { redirect } from "next/navigation";
+import LogoutButton from "../button/LogoutButton";
 
 
 
@@ -40,10 +41,7 @@ if (!session) {
           </li>
         ))}
       </ul>
-      <button className={styles.logout}>
-        <MdLogout />
-        <span className={styles.logoutText}>Logout</span>
-      </button>
+  <LogoutButton />
     </div>
   );
 }
