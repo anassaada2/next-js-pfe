@@ -57,7 +57,7 @@ export default function Footer() {
           <Image
             height={217}
             width={459}
-            src="/image/AFEC/logo2.jpg"
+            src="/image/AFEC/logo2.JPG"
             alt="section pattern"
           />
         </div>
